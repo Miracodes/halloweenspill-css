@@ -1,0 +1,60 @@
+<html lang="no">
+<head>
+	<link rel="shortcut icon" href="img/icon.png"> <!-- sideicon bilde file-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>Startgame</title>
+	<link rel="stylesheet" type="text/css" href="css/startngameover.css">
+</head>
+
+<body> 
+
+	<div class="regelbox" id="regler">
+    <div class="regelwrap">
+        <div class="regeltopfarge"> Rules: </div>
+        <div class="regelUtseende"> 
+            <p> 1. Spend up all your money in one try<br><br>2. Finish in 1min and 30sec<br><br>3. Cant<br> <!-- Innhold i regelbox -->
+            <p> Prize: Chance to win xbox 240 </p><br>
+            <p><a href="javascript:void(0)" onclick="toggle_box('regler');" style="color:black">-> close <-</a></p> <!-- lukker box -->
+        </div>
+    </div>
+</div>
+
+	
+	<div class="startmenu"> <!-- dette vises først på siden -->
+			<p>  Welcome to halloween shopping game! </p> 
+			<img src="img/pressstart.gif" class="gif">   
+			<p><a href="javascript:void(0)" onclick="toggle_box('regler');" style="color: white"> -> GUIDE <-</a> <!-- åpner -->
+	        <p>-> <span id="blinking"> START</span> <-</p> 
+	</div>
+</body>
+<script type="text/javascript"> 
+
+   //dette er js kode for regelbox	
+	function toggle_box(id)  {
+		var e = document.getElementById(id);
+
+		if (e.style.display == 'block')
+			e.style.display = 'none';
+		else 
+			e.style.display = 'block';
+	}
+	//js kode for at teksten skal flashe/blinke
+	var tekstblink = document.getElementById('blinking');
+
+	function animasjon(){
+
+		if (tekstblink.style.opacity == '0.9'){
+		tekstblink.style.opacity = '0';
+		} 
+		else {
+		tekstblink.style.opacity = '0.9';
+		} 
+	} 
+ 	setInterval('animasjon()', 600); 
+</script>
+</html>
